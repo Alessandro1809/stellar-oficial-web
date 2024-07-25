@@ -1,6 +1,6 @@
 # STELLAR WEBSITE
 
-(https://res.cloudinary.com/drwd1wtvt/image/upload/v1721938086/Captura_de_pantalla_2024-07-25_140635_ih380n.png)]
+![Preview](https://res.cloudinary.com/drwd1wtvt/image/upload/v1721938086/Captura_de_pantalla_2024-07-25_140635_ih380n.png)]
 
 This is the webpage of STELLAR, a company focused on digital marketing and software development. Rising since 2023, STELLAR offers its services in Branding, web development, SEO, Marketing, and much more.
 
