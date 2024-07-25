@@ -1,0 +1,23 @@
+---
+import NavLinks from "@components/NavLinks.astro";
+import StellarGradient from "@assets/StellarGradient.svg";
+---
+
+<header>
+    <nav class=" flex flex-row justify-between items-center py-6 mx-4">
+        <a href="/" class="logo">
+            <picture class="">
+                <img src={StellarGradient.src} alt="Stellar logo" />
+            </picture>
+        </a>
+
+        <div class="z-100">
+            <NavLinks navLink="mx-4 hover:text-cyan-400 transition-all duration-200 text-2xl" />
+        </div>
+    </nav>
+</header>
+
+<style>
+
+    
+</style>

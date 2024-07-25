@@ -1,0 +1,22 @@
+---
+interface Props {
+    navLink:string
+}
+
+const { navLink } = Astro.props;
+
+
+
+---
+<div class="text-md font-medium z-50">
+ <a class={navLink} href="/Projects">Projects</a>
+
+ <a class={navLink} href="/About">About us</a>
+
+ <a class={navLink} href="/Blog">Blog</a>
+
+ <a class={navLink} href="/Contact">Contact us</a>
+</div>
+<style>
+
+</style>

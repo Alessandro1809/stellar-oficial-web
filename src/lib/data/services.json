@@ -1,0 +1,34 @@
+{
+    "services": [
+        {   
+            "id": 1,
+            "title": "Digital Marketing",
+            "description": "Boost your online presence with tailored digital marketing strategies.",
+            "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/c_thumb,w_200,g_face/v1720911197/HugeiconsMarketing_jg8xky.svg"
+        },
+        {
+            "id": 2,
+            "title": "Web Design",
+            "description": "Create stunning, user-friendly websites that engage and convert visitors.",
+            "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/c_thumb,w_200,g_face/v1720911102/Design_bgynvi.svg"
+        },
+        {
+            "id": 3,
+            "title": "Branding",
+            "description": "Develop a strong, recognizable brand identity that sets you apart.",
+            "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/c_thumb,w_200,g_face/v1720910930/LetsIconsLampFill_vnvwtr.svg"
+        },
+        {
+            "id": 4,
+            "title": "Software Development",
+            "description": "Build custom software solutions to meet your unique business needs.",
+            "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/c_thumb,w_200,g_face/v1720911024/Develop_sk8kas.svg"
+        },
+        {
+            "id": 5,
+            "title": "SEO",
+            "description": "Improve your search engine rankings and drive organic traffic to your site.",
+            "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/c_thumb,w_200,g_face/v1720910839/Seo_hlbkaz.svg"
+        }
+    ]
+}

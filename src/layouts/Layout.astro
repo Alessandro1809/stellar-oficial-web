@@ -1,0 +1,66 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title,description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<meta charset="UTF-8" />
+		<meta name={description} content="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia! Vamos a hacer que tu idea se convierta en realidad!" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/StellarGradient.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<div class="abosolute mx-auto inset-0 -z-50 w-full [background:radial-gradient(125%_125%_at_50%_10%,#000B1C_40%,#380670_100%)]">
+		<Header />
+		<body>
+			<!-- <SparklesCore
+			client:idle
+			id="tsparticlesfullpage"
+			background="transparent"
+			minSize={0.6}
+			maxSize={1.4}
+			opacity={0.2}
+			particleDensity={100}
+			className="w-full h-full fixed z-0"
+			particleColor="#FFFFFF"
+		  /> -->
+			<slot /><!-- contenido del index-->
+		</body>
+		<Footer />
+		</div>
+</html>
+<style is:global>
+	:root {
+		font-family: "Noto Sans Display", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: lighter;
+		font-style: normal;
+		font-variation-settings:
+			"wdth" 100;
+		color-scheme: light dark;
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+
+	}
+	
+
+</style>
