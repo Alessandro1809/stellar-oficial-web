@@ -17,53 +17,37 @@ import data from './../../src/lib/data/services.json';
     <div>
         <h1 class="text-7xl md:text-8xl font-bold px-10 pb-20 text-center transition-all duration-1000 animate-blurred-fade-in"><span class="text-cyan-300 text_glowing">Boosting</span> your <span class="text-cyan-300 text_glowing">success</span> with your own light!</h1>
         <div class="bg-cyan-400/20 w-[30%] rounded-full blur-3xl h-52 -z-5 absolute right-0"/>
-    <section class="mt-64">
-        <div class="bg-cyan-400/30 w-[50%] rounded-full blur-3xl h-32 -z-5 absolute"/>
-          
-        <h2 class="text-5xl font-bold px-10 md:mx-20 pb-20 animate-blurred-fade-in transition-all duration-1000 ">
-            SERVICES
-        </h2>
-        <article class="flex justify-center">
-        <article class="flex flex-wrap justify-center w-full md:w-4/5">
-        {data.services.map((service) => (
-        
-            <div class="bg-gradient-to-b from-cyan-900/10 to-transparent w-96 h-auto px-2 group hover:gb-gradient-to-b hover:from-white/10 hover:to-transparent  transition-all duration-300 hover:-translate-y-3 mx-2 my-2">
-              <p class="hero tracking-wider text-center text-4xl p-4 group-hover:text-cyan-400 text-card transition-all duration-300 text-cyan-200 ">
-                {service.title}
-              </p>
-              <picture class="flex justify-center pb-2 text-lg">
-                <img class="w-16 " src={service.img} alt="" />
-              </picture>
-              
-              <p class="text-center opacity-0 transition-all group-hover:opacity-100 duration-500 py-1">
-                {service.description}
-              </p>
-            </div>
-          ))}
-          </article>
-        </article>
-    </section>
-</section>
+            <section class="mt-64">
+                <div class="bg-cyan-400/30 w-[50%] rounded-full blur-3xl h-32 -z-5 absolute"/>
+                
+                <h2 class="text-5xl font-bold px-10 md:mx-20 pb-20 animate-blurred-fade-in transition-all duration-1000 ">
+                    SERVICES
+                </h2>
+                <article class="flex justify-center animate-blurred-fade-in">
+                <article class="flex flex-wrap justify-center w-full md:w-4/5">
+                {data.services.map((service) => (
+                
+                    <div class="bg-gradient-to-b from-cyan-900/30 to-transparent w-96 h-auto px-2 group hover:gb-gradient-to-b hover:from-white/20 hover:to-transparent  transition-all duration-300 hover:-translate-y-3 mx-2 my-2">
+                    <p class="hero tracking-wider text-center text-4xl p-4 group-hover:text-cyan-400 text-card transition-all duration-300 text-cyan-200 ">
+                        {service.title}
+                    </p>
+                    <picture class="flex justify-center pb-2 text-lg">
+                        <img class="w-16 " src={service.img} alt="" />
+                    </picture>
+                    
+                    <p class="text-center opacity-0 transition-all group-hover:opacity-100 duration-500 py-1">
+                        {service.description}
+                    </p>
+                    </div>
+                ))}
+                </article>
+                </article>
+            </section>
+        </section>
 <style>
   .hero {
     font-family: "Chokokutai", system-ui;
   font-weight: 400;
   font-style: normal;
-  }
- 
-  
-
-  .text_glowing {
-    text-shadow:
-    
-      0 0 10px #3de2ff5e,
-      0 0 20px #ffffff58;
-  }
-
-
-  .text-card {
-    text-shadow:
-        0 0 10px #643dff5e,
-        0 0 20px #ffffff58;
   }
 </style>

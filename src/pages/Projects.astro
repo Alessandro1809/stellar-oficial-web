@@ -1,10 +1,33 @@
 ---
-
+import example from "@assets/example.png";
 ---
 
 <h2 class="text-4xl font-bold px-10 pb-4 animate-fade-in transition-all duration-1000">
     PROJECTS & CLIENTS
 </h2>
 
-
+<section class="flex flex-col p-4">
+    <article class="w-[35em]">
+        <div class="relative w-[35em] overflow-hidden items-center justify-center py-20 pl-16 bg-white/10">
+        <picture>
+            <img class="w-full h-auto hover:scale-105 transition-all duration-300" src={example.src} alt="Stellar logo"/>
+        </picture>
+        </div>  
+        <footer class="flex justify-between p-4 ">
+            <p class="font-medium text-xl">Stellar Website</p>
+    
+            <div class="flex gap-4">
+                <span class="border p-2 rounded-xl text-lg">
+                    Astro
+                </span>
+                <span class="border p-2 rounded-xl text-lg">
+                    React
+                </span>
+                <span class="border p-2 rounded-xl text-lg">
+                    TS
+                </span>
+            </div>
+        </footer>
+    </article>
+</section>
 
