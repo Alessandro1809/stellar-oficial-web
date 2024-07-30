@@ -14,16 +14,15 @@
     "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
     "@midudev/tailwind-animations": "^0.0.7",
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "aos": "^2.3.4",
     "astro": "^4.12.2",
+    "astro-navbar": "^2.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.4"
-  },
-  "devDependencies": {
-    "@types/aos": "^3.0.7"
   }
 }

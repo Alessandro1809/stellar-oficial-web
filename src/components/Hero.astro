@@ -1,13 +1,14 @@
 ---
 import data from './../../src/lib/data/services.json';
 import StellarLogoOf from "@assets/StellarLogoOf.svg";
+
 ---
 
 <section class="mb-20  ">
     <div class="relative">
         <div class="absolute -z-1 top-32 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 rounded-full w-60 h-60 blur-3xl"> </div>
-        <picture class="flex justify-center items-center -z-0 md:pr-52 animate-blurred-fade-in transition-all duration-1000">
-            <img src={StellarLogoOf.src} alt="Stellar logo"/>
+        <picture class="flex mx-4 justify-center items-center -z-0 md:pr-52 animate-blurred-fade-in transition-all duration-1000">
+            <img src={StellarLogoOf.src} alt="Stellar logo" class="w-[60%] md:w-[22em]"/>
   
                 <p class=" mb-10 -mx-52 text-[50px] md:text-[120px] hero hidden md:block animate-blurred-fade-in transition-all duration-1000 text_glowing">tellar</p>
           
@@ -15,14 +16,14 @@ import StellarLogoOf from "@assets/StellarLogoOf.svg";
                 
     </div>
     <div>
-        <h1 class="text-7xl md:text-8xl font-bold px-10 pb-20 text-center transition-all duration-1000 animate-blurred-fade-in"><span class="text-cyan-300 text_glowing">Boosting</span> your <span class="text-cyan-300 text_glowing">success</span> with your own light!</h1>
+        <h1 class="mt-12 text-6xl md:text-8xl font-bold px-10 pb-20 text-center transition-all duration-1000 animate-blurred-fade-in"><span class="text-cyan-300 text_glowing">Leading</span> you to <span class="text-cyan-300 text_glowing">success</span> with your own light!</h1>
     
         <div class="bg-cyan-400/20 w-[30%] rounded-full blur-3xl h-52 -z-5 absolute right-0"/>
         
-            <section class="mt-64">
+            <section class="md:mt-42 mt-20">
                 <div class="bg-cyan-400/30 w-[50%] rodunded-full blur-3xl h-32 -z-5 absolute"/>
                 
-                <h2 class="text-5xl font-bold px-10 md:mx-20 pb-20 animate-blurred-fade-in transition-all duration-1000 ">
+                <h2 class="text-5xl font-bold px-10 md:mx-20 md:pb-20 animate-blurred-fade-in transition-all duration-1000 pb-10">
                     SERVICES
                 </h2>
                 <div
@@ -57,8 +58,9 @@ import StellarLogoOf from "@assets/StellarLogoOf.svg";
         </section>
 <style>
   .hero {
-    font-family: "Chokokutai", system-ui;
+  font-family: "Chokokutai", system-ui;
   font-weight: 400;
   font-style: normal;
   }
 </style>
+

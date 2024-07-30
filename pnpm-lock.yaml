@@ -20,6 +20,9 @@ importers:
       '@midudev/tailwind-animations':
         specifier: ^0.0.7
         version: 0.0.7(tailwindcss@3.4.6)
+      '@types/aos':
+        specifier: ^3.0.7
+        version: 3.0.7
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -32,6 +35,9 @@ importers:
       astro:
         specifier: ^4.12.2
         version: 4.12.2(typescript@5.5.4)
+      astro-navbar:
+        specifier: ^2.3.3
+        version: 2.3.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -44,10 +50,6 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
-    devDependencies:
-      '@types/aos':
-        specifier: ^3.0.7
-        version: 3.0.7
 
 packages:
 
@@ -767,6 +769,9 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+
+  astro-navbar@2.3.3:
+    resolution: {integrity: sha512-WAiQUVh3fS+bUw1oDcWpddFj30z3VgmMDmSjpU78idCXiV5t4KtlBvKV0mE/+hpcGLK0ji1evvCbk2wQ7wphyQ==}
 
   astro@4.12.2:
     resolution: {integrity: sha512-l6OmqlL+FiuSi9x6F+EGZitteOznq1JffOil7st7cdqeMCTEIym4oagI1a6zp6QekliKWEEZWdplGhgh1k1f7Q==}
@@ -2872,6 +2877,8 @@ snapshots:
       dequal: 2.0.3
 
   array-iterate@2.0.1: {}
+
+  astro-navbar@2.3.3: {}
 
   astro@4.12.2(typescript@5.5.4):
     dependencies:

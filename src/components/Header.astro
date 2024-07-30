@@ -1,20 +1,35 @@
 ---
+const props = Astro.props 
 import NavLinks from "@components/NavLinks.astro";
 import StellarGradient from "@assets/StellarGradient.svg";
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
 ---
 
 <header>
-    <nav class=" flex flex-row justify-between items-center py-6 mx-4">
-        <a href="/" class="logo">
-            <picture class="">
-                <img src={StellarGradient.src} alt="Stellar logo" />
-            </picture>
-        </a>
-
-        <div class="z-100">
-            <NavLinks navLink="mx-4 hover:text-cyan-400 transition-all duration-200 text-2xl" />
-        </div>
-    </nav>
+    <Astronav>
+     
+            <Astronav>
+              <div class="flex justify-between p-6">
+                <picture class="h-full w-full">
+                <a href="/" class="logo">
+                    
+                        <img class="min-w-12 h-12" src={StellarGradient.src} alt="Stellar logo" />
+                    </a>
+                </picture>
+                    
+                <MenuIcon class="w-10 h-auto text-white absolute top-5 right-6 z-50 block md:hidden animate-blurred-fade-in" />
+                <NavLinks navLink="mx-4 hover:text-cyan-400 transition-all duration-200 text-2xl md:block text-nowrap" />
+              </div>
+              <MenuItems class="hidden md:flex absolute top-0 z-40 pt-32 md:pt-0 translate-y-200 bg-slate-900/90 w-full text-center ">
+                <ul class="flex flex-col gap-4 pb-4 text-2xl font-semibold transition-all duration-1000 md:hidden">
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </MenuItems>
+            </Astronav>
+          </div>
 </header>
 
 <style>

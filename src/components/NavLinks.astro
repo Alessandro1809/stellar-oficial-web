@@ -8,7 +8,7 @@ const { navLink } = Astro.props;
 
 
 ---
-<div class="text-md font-medium z-50">
+<div class="text-md font-medium z-50 flex md:translate-y-2 -translate-y-32 transition-all duration-1000">
  <a class={navLink} href="/Projects">Projects</a>
 
  <a class={navLink} href="/About">About us</a>
@@ -17,6 +17,3 @@ const { navLink } = Astro.props;
 
  <a class={navLink} href="/Contact">Contact us</a>
 </div>
-<style>
-
-</style>

@@ -11,20 +11,23 @@ const { title,description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<meta charset="UTF-8" />
-		<meta name={description} content="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia! Vamos a hacer que tu idea se convierta en realidad!" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia! Vamos a hacer que tu idea se convierta en realidad!" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/StellarGradient.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<title>{title}</title>
-	</head>
+	  </head>
 	<div class="abosolute mx-auto inset-0 -z-50 w-full [background:radial-gradient(125%_125%_at_50%_10%,#000B1C_40%,#380670_100%)]">
-		<Header />
+		
 		<body>
+			<Header/>
 			<!-- <SparklesCore
 			client:idle
 			id="tsparticlesfullpage"
@@ -37,8 +40,13 @@ const { title,description } = Astro.props;
 			particleColor="#FFFFFF"
 		  /> -->
 			<slot /><!-- contenido del index-->
+			<Footer />
+			<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+			<script is:inline>
+			AOS.init();
+			</script>
 		</body>
-		<Footer />
+		
 		</div>
 </html>
 <style is:global>
@@ -76,8 +84,3 @@ const { title,description } = Astro.props;
   }
 
 </style>
-<script>
-	import AOS from 'aos';
-
-AOS.init();
-</script>
