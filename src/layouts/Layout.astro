@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import SparklesCore from '@/components/react/SparklesCore';
 interface Props {
 	title: string;
 	description: string;
@@ -26,9 +27,8 @@ const { title,description } = Astro.props;
 	  </head>
 	<div class="abosolute mx-auto inset-0 -z-50 w-full [background:radial-gradient(125%_125%_at_50%_10%,#000B1C_40%,#380670_100%)]">
 		
-		<body>
-			<Header/>
-			<!-- <SparklesCore
+		<body >
+			<SparklesCore
 			client:idle
 			id="tsparticlesfullpage"
 			background="transparent"
@@ -38,8 +38,11 @@ const { title,description } = Astro.props;
 			particleDensity={100}
 			className="w-full h-full fixed z-0"
 			particleColor="#FFFFFF"
-		  /> -->
+		  /> 
+			<Header/>
+			<main class="w-full border-b rounded-b-[5rem]">
 			<slot /><!-- contenido del index-->
+			</main>
 			<Footer />
 			<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 			<script is:inline>

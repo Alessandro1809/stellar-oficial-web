@@ -1,0 +1,40 @@
+---
+import data from '@/lib/data/services.json';
+---
+
+<div class="bg-cyan-400/10 w-[30%] rounded-full blur-3xl h-52 -z-5 absolute right-0"/>
+        
+            <section class="md:mt-42 mt-20 container mx-auto">
+                <div class="bg-cyan-400/30 w-[50%] rodunded-full blur-3xl h-32 -z-5 absolute"/>
+                
+                <h2 class="text-5xl font-bold px-4 md:pb-20 animate-blurred-fade-in transition-all duration-1000 pb-10">
+                    SERVICES
+                </h2>
+                <div
+                data-aos-once="true" data-aos="fade-up" 
+                data-aos-duration="1000" 
+                data-aos-delay="100"
+                >
+                <article class="flex justify-center animate-blurred-fade-in">
+
+                <article class="flex flex-wrap justify-center w-full md:w-4/5">
+                {data.services.map((service) => (
+                
+                    <div class="bg-gradient-to-b from-cyan-900/30 to-transparent w-96 h-auto px-2 group hover:gb-gradient-to-b hover:from-white/20 hover:to-transparent  transition-all duration-300 hover:-translate-y-3 mx-2 my-2">
+                    <p class="hero tracking-wider text-center text-4xl p-4 group-hover:text-cyan-400 text-card transition-all duration-300 text-cyan-200 ">
+                        {service.title}
+                    </p>
+                    <picture class="flex justify-center pb-2 text-lg">
+                        <img class="w-16 " src={service.img} alt="" />
+                    </picture>
+                    
+                    <p class="text-center opacity-0 transition-all group-hover:opacity-100 duration-500 py-1">
+                        {service.description}
+                    </p>
+                    </div>
+                ))}
+                </article>
+                </article>
+                </div>
+            </section>
+        </div>
