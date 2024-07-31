@@ -2,6 +2,7 @@
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import SparklesCore from '@/components/react/SparklesCore';
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 interface Props {
 	title: string;
 	description: string;
@@ -13,6 +14,7 @@ const { title,description } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		
 		<meta charset="UTF-8" />
 		<meta name="description" content="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia! Vamos a hacer que tu idea se convierta en realidad!" />
 		<meta name="viewport" content="width=device-width" />
@@ -24,11 +26,13 @@ const { title,description } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<title>{title}</title>
+		<ViewTransitions fallback='none'/>
 	  </head>
 	<div class="abosolute mx-auto inset-0 -z-50 w-full [background:radial-gradient(125%_125%_at_50%_10%,#000B1C_40%,#380670_100%)]">
 		
-		<body >
+		<body>
 			<SparklesCore
+			transition:persist
 			client:idle
 			id="tsparticlesfullpage"
 			background="transparent"
@@ -40,8 +44,8 @@ const { title,description } = Astro.props;
 			particleColor="#FFFFFF"
 		  /> 
 			<Header/>
-			<main class="w-full border-b rounded-b-[5rem]">
-			<slot /><!-- contenido del index-->
+			<main class="w-full border-b rounded-b-[5rem] animate-blurred-fade-in">
+			<slot class="animacion" /><!-- contenido del index-->
 			</main>
 			<Footer />
 			<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -70,8 +74,13 @@ const { title,description } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
-
+		
 	}
+	.hero {
+  font-family: "Chokokutai", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  }
 	.text_glowing {
     text-shadow:
     
@@ -85,5 +94,7 @@ const { title,description } = Astro.props;
         0 0 10px #643dff5e,
         0 0 20px #ffffff58;
   }
+ 
+
 
 </style>

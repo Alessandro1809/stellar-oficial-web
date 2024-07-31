@@ -2,7 +2,7 @@
 const props = Astro.props 
 import NavLinks from "@components/NavLinks.astro";
 import StellarGradient from "@assets/StellarGradient.svg";
-import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
 
 <header class="container mx-auto">
@@ -17,7 +17,7 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu
                     </a>
                 </picture>
                     
-                <MenuIcon class="w-10 h-auto text-white absolute top-5 right-6 z-50 block md:animate-fade-out animate-blurred-fade-in" />
+                <MenuIcon class="w-10 h-auto text-white absolute top-5 right-6 z-50 block md:hidden animate-blurred-fade-in" />
                 <NavLinks navLink="mx-4 hover:text-cyan-400 transition-all duration-200 text-2xl md:block text-nowrap" />
               </div>
               <MenuItems class="hidden md:flex absolute top-0 z-40 pt-32 md:pt-0 translate-y-200 bg-slate-900/90 w-full text-center ">
