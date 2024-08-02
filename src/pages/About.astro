@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import Logo from "@assets/Logo.webp";
 import data from "@/lib/data/aboutServices.json"
-import AnimatedLogo from "@/components/AnimatedLogo.astro"
+import LinealService from "@components/icons/LinealServices.astro"
+import AnimatedServices from "@/components/icons/AnimatedServices.astro";
 ---
 
 <Layout title="About" description="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia!">
@@ -12,13 +12,16 @@ import AnimatedLogo from "@/components/AnimatedLogo.astro"
             
             <div class="grid grid-cols-1 md:grid-cols-2">
             <article class="w-[100%] h-auto p-12 mb-10 rounded-sm bg-clip-padding bg-gradient-to-r from-white/20 via-cyan-300/20 to-indigo-500/20">
-                <p class="text-xl">Welcome to STELLAR, where technology and creativity converge to propel your business to new heights. Founded in November 2023, STELLAR is a cutting-edge software and digital marketing company committed to delivering exceptional services and innovative solutions tailored to meet the unique needs of our clients.
-                </p>
+                <p class="text-xl">Welcome to <strong>STELLAR</strong>, where technology and creativity converge to propel your business to new heights. Founded in November 2023, STELLAR is a cutting-edge software and digital marketing company committed to delivering exceptional services and innovative solutions tailored to meet the unique needs of our clients.
+                </p><br/>
+                <p class="text-xl"><strong>Our Mission</strong><br/>
+                    At STELLAR, our mission is to empower businesses with innovative technology solutions and creative marketing strategies that drive growth and success. We are dedicated to delivering excellence, fostering long-term partnerships, and exceeding our clients' expectations.</p>
+                
             </article>
             <div class="relative pointer-events-none pb-10">
                 <div class="absolute -z-1 top-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 rounded-full w-60 h-60 blur-3xl"/>
-                <picture class="flex  justify-center items-center -z-0 transition-all duration-1000">
-                    <img src={Logo.src} alt="Stellar logo" class="w-[70%] transition-all duration-1000 pointer-events-none"/>
+                <picture class="flex px-4 justify-center items-center -z-0 transition-all duration-1000">
+                    <AnimatedServices height={400} />
           
                 </picture>   
             </div>
@@ -27,22 +30,41 @@ import AnimatedLogo from "@/components/AnimatedLogo.astro"
         </section>
         <section class="container mx-auto px-4 transition-all duration-1000">
             <h2 class="text-5xl font-bold mb-5 my-10 transition-all duration-1000">Our services</h2>
-                <p class="text-xl w-auto">At STELLAR, we offer a comprehensive suite of services designed to enhance your digital presence and drive measurable results:</p>
+            
+                <p class="text-xl w-auto ">At STELLAR, we offer a comprehensive suite of services designed to enhance your digital presence and drive measurable results:</p>
+                
                 <article class="flex flex-col md:flex-row transition-all duration-1000">
                     <div class="grid md:max-w-[60%] mb-10 transition-all duration-1000">
                 {data.aboutServices.map((service) => (
-                    <div class="flex flex-col justify-center md:max-w-[90%] transition-all duration-1000">
+                    <div class="flex flex-col justify-center md:max-w-[90%] transition-all duration-1000 ">
                         <h3 class="text-3xl font-bold mb-2 md:px-4 my-10 transition-all duration-1000">{service.title}</h3>
-                        <p class="text-xl flex justify-center">{service.description}</p>
+                        <p class="text-xl flex justify-center ">{service.description}</p>
                     </div>
                 ))}
                     </div>
                 <div class="grid justify-center items-center mb-10transition-all duration-1000">
-                    <article>
-                        <AnimatedLogo width={300} height={500} />
-                    </article>
+                    <picture class="py-28">
+                         <LinealService />
+                    </picture>
+                
                 </div>
                 </article>
+            
+        </section>
+
+        <section class="justify-center items-center md:flex gap-6 p-4">
+            <h2 class="text-6xl md:text-8xl font-bold mb-5 my-10 transition-all duration-1000">Why Choose <strong>STELLAR</strong>?</h2>
+            <article class="text-xl max-w-[60%]">
+                <p class="pb-6"><span class="text-2xl font-medium ">Expertise:</span><br/> 
+                    Our team of skilled professionals brings years of experience and industry knowledge to every project, ensuring high-quality outcomes and unparalleled service.</p>
+                <p class="pb-6"><span class="text-2xl font-medium ">Innovation:</span><br/> 
+                    We stay ahead of the curve by continuously embracing the latest technologies and trends, offering our clients innovative solutions that give them a competitive edge.</p>
+                <p class="pb-6"><span class="text-2xl font-medium ">Customer-Centric Approach:</span><br/> 
+                    We prioritize our clients' needs and goals, working closely with them to develop customized strategies that deliver tangible results.</p>
+                <p class="pb-6"><span class="text-2xl font-medium ">Commitment to Excellence:</span><br/> 
+                    Quality and excellence are at the core of everything we do. We are committed to delivering solutions that not only meet but exceed our clients' expectations.</p>
+
+            </article>
         </section>
     </main>
 </Layout>
