@@ -1,19 +1,17 @@
 ---
-const props = Astro.props 
 import NavLinks from "@components/NavLinks.astro";
-import StellarGradient from "@assets/StellarGradient.svg";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import AnimatedLogo from "./AnimatedLogo.astro";
 ---
 
 <header class="container mx-auto">
     <Astronav>
      
             <Astronav>
-              <div class="flex justify-between p-4 md:py-6">
-                <picture class="h-full w-full">
-                <a href="/" class="logo z-50 relative">
-                    
-                        <img class="min-w-12 h-12" src={StellarGradient.src} alt="Stellar logo" />
+              <div class="flex justify-between p-4 md:py-2">
+                <picture class="h-full w-auto rotate-[145deg] transition-all duration-1000 animate-blurred-fade-in">
+                <a href="/" class="logo z-50 relative w-auto">
+                        <AnimatedLogo transition:persist/>
                     </a>
                 </picture>
                     

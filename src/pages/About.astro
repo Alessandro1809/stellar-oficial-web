@@ -1,20 +1,18 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import StellarLogoOf from "@assets/StellarLogoOf.svg";
 import Logo from "@assets/Logo.webp";
+import data from "@/lib/data/aboutServices.json"
+import AnimatedLogo from "@/components/AnimatedLogo.astro"
 ---
 
 <Layout title="About" description="Stellar se encargará de llevar tus ideas al siguiente nivel con luz propia!">
     <main class="container mx-auto">
-        <section class="w-full min-h-screen max-h-full">  
-            <h2 class="text-5xl font-bold mb-2 md:px-4" >Who we are?</h2>
+        <section class="w-full max-h-full">  
+            <h2 class="text-5xl font-bold mb-5 md:px-4 my-10" >Who we are?</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2">
             <article class="w-[100%] h-auto p-12 mb-10 rounded-sm bg-clip-padding bg-gradient-to-r from-white/20 via-cyan-300/20 to-indigo-500/20">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, unde excepturi. Porro, quos! Quaerat dolore similique voluptatem earum, eum vitae. Molestias non dolorum esse ex sequi, quos perspiciatis vero voluptatem.lorem
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ex dolore culpa porro ipsa, beatae maiores obcaecati perspiciatis accusantium, aliquid dignissimos, fuga omnis rem voluptatum voluptatem quasi hic vel dolor!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque perspiciatis molestiae dolore alias. Necessitatibus, pariatur dolore? Voluptate voluptatibus quibusdam consequatur, exercitationem repellat amet, distinctio praesentium accusamus assumenda nulla architecto!
-
+                <p class="text-xl">Welcome to STELLAR, where technology and creativity converge to propel your business to new heights. Founded in November 2023, STELLAR is a cutting-edge software and digital marketing company committed to delivering exceptional services and innovative solutions tailored to meet the unique needs of our clients.
                 </p>
             </article>
             <div class="relative pointer-events-none pb-10">
@@ -26,6 +24,25 @@ import Logo from "@assets/Logo.webp";
             </div>
         </div>
             <div>
+        </section>
+        <section class="container mx-auto px-4 transition-all duration-1000">
+            <h2 class="text-5xl font-bold mb-5 my-10 transition-all duration-1000">Our services</h2>
+                <p class="text-xl w-auto">At STELLAR, we offer a comprehensive suite of services designed to enhance your digital presence and drive measurable results:</p>
+                <article class="flex flex-col md:flex-row transition-all duration-1000">
+                    <div class="grid md:max-w-[60%] mb-10 transition-all duration-1000">
+                {data.aboutServices.map((service) => (
+                    <div class="flex flex-col justify-center md:max-w-[90%] transition-all duration-1000">
+                        <h3 class="text-3xl font-bold mb-2 md:px-4 my-10 transition-all duration-1000">{service.title}</h3>
+                        <p class="text-xl flex justify-center">{service.description}</p>
+                    </div>
+                ))}
+                    </div>
+                <div class="grid justify-center items-center mb-10transition-all duration-1000">
+                    <article>
+                        <AnimatedLogo width={300} height={500} />
+                    </article>
+                </div>
+                </article>
         </section>
     </main>
 </Layout>
