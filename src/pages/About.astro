@@ -12,9 +12,9 @@ import AnimatedServices from "@/components/icons/AnimatedServices.astro";
             
             <div class="grid grid-cols-1 md:grid-cols-2">
             <article class="w-[100%] h-auto p-12 mb-10 rounded-sm bg-clip-padding bg-gradient-to-r from-white/20 via-cyan-300/20 to-indigo-500/20">
-                <p class="text-xl">Welcome to <strong>STELLAR</strong>, where technology and creativity converge to propel your business to new heights. Founded in November 2023, STELLAR is a cutting-edge software and digital marketing company committed to delivering exceptional services and innovative solutions tailored to meet the unique needs of our clients.
+                <p class="text-2xl">Welcome to <strong>STELLAR</strong>, where technology and creativity converge to propel your business to new heights. Founded in November 2023, STELLAR is a cutting-edge software and digital marketing company committed to delivering exceptional services and innovative solutions tailored to meet the unique needs of our clients.
                 </p><br/>
-                <p class="text-xl"><strong>Our Mission</strong><br/>
+                <p class="text-2xl"><strong>Our Mission</strong><br/>
                     At STELLAR, our mission is to empower businesses with innovative technology solutions and creative marketing strategies that drive growth and success. We are dedicated to delivering excellence, fostering long-term partnerships, and exceeding our clients' expectations.</p>
                 
             </article>
@@ -29,21 +29,24 @@ import AnimatedServices from "@/components/icons/AnimatedServices.astro";
             <div>
         </section>
         <section class="container mx-auto px-4 transition-all duration-1000">
-            <h2 class="text-5xl font-bold mb-5 my-10 transition-all duration-1000">Our services</h2>
-            
-                <p class="text-xl w-auto ">At STELLAR, we offer a comprehensive suite of services designed to enhance your digital presence and drive measurable results:</p>
+
+            <article data-aos="fade-up" data-aos-once="true" daata-aos-duration="1000"> 
+                <h2 class="text-5xl font-bold mb-5 my-10 transition-all duration-1000" >Our services</h2>
                 
+                <p class="text-xl w-auto ">At STELLAR, we offer a comprehensive suite of services designed to enhance your digital presence and drive measurable results:</p> 
+            </article>
+            
                 <article class="flex flex-col md:flex-row transition-all duration-1000">
                     <div class="grid md:max-w-[60%] mb-10 transition-all duration-1000">
                 {data.aboutServices.map((service) => (
-                    <div class="flex flex-col justify-center md:max-w-[90%] transition-all duration-1000 ">
+                    <div class="flex flex-col justify-center md:max-w-[90%] transition-all duration-1000 "data-aos="fade-up" data-aos-once="true" daata-aos-duration="1000">
                         <h3 class="text-3xl font-bold mb-2 md:px-4 my-10 transition-all duration-1000">{service.title}</h3>
                         <p class="text-xl flex justify-center ">{service.description}</p>
                     </div>
                 ))}
                     </div>
-                <div class="grid justify-center items-center mb-10transition-all duration-1000">
-                    <picture class="py-28">
+                <div class="hidden md:grid justify-center items-center mb-10transition-all duration-1000">
+                    <picture class="py-28" data-aos="fade-up" data-aos-once="true" daata-aos-duration="1000">
                          <LinealService />
                     </picture>
                 
@@ -52,9 +55,9 @@ import AnimatedServices from "@/components/icons/AnimatedServices.astro";
             
         </section>
 
-        <section class="justify-center items-center md:flex gap-6 p-4">
-            <h2 class="text-6xl md:text-8xl font-bold mb-5 my-10 transition-all duration-1000">Why Choose <strong>STELLAR</strong>?</h2>
-            <article class="text-xl max-w-[60%]">
+        <section class="justify-center items-center md:flex gap-6 p-4"  data-aos="fade-up" data-aos-once="true" daata-aos-duration="1000">
+            <h2 class="text-5xl md:text-8xl font-bold mb-5 my-10 transition-all duration-1000">Why Choose <strong class="bg-gradient-to-tr from-white to-indigo-500 bg-clip-text text-transparent w-auto h-auto">STELLAR</strong>?</h2>
+            <article class="text-xl w-[100%] md:max-w-[60%]">
                 <p class="pb-6"><span class="text-2xl font-medium ">Expertise:</span><br/> 
                     Our team of skilled professionals brings years of experience and industry knowledge to every project, ensuring high-quality outcomes and unparalleled service.</p>
                 <p class="pb-6"><span class="text-2xl font-medium ">Innovation:</span><br/> 
