@@ -4,7 +4,7 @@ import { Articles } from "@/lib/data/blogs"
 
 const { id } =Astro.params;
 
-const blog = Articles.find((blog) => blog.id === Number(id));
+const blog:any = Articles.find((blog) => blog.id === Number(id));
 
 const { title, description, post, img, link} = blog;
 
