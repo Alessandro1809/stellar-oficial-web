@@ -1,9 +1,20 @@
 ---
-
+import Layout from '@layouts/Layout.astro';
+import {ContactForm} from '@components/react/ContactForm';
 ---
 
-<p>hola</p>
-
+<Layout title="Contact" description="Contactanos para mas informacion!">
+    <section class="container mx-auto">
+        <div class="min-h-screen">
+            <article class="grid grid-cols-1 md:grid-cols-2">
+                <div>
+                    <h2 class="text-8xl font-bold">Contactanos</h2>
+                </div>
+                <ContactForm client:idle/>
+            </article>
+        </div>
+    </section>
+</Layout>
 <style>
 
 </style>

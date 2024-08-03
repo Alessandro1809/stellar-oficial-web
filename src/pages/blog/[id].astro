@@ -1,0 +1,42 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { blogs } from "@/lib/data/blogs.json"
+
+const { id } =Astro.params;
+
+const blog = blogs.find((blog) => blog.id === Number(id));
+
+const { title, description, post, img, link} = blog;
+
+export async function getStaticPaths() {
+
+return blogs.map((blog) => ({
+    params:{
+        id: blog.id
+    }
+}))
+    
+}
+
+---
+
+<Layout title={title} description='Conoce nuestras ultimas novedades'>
+    <section class="container mx-auto">
+        <article class="flex justify-center items-center">
+            <div class="min-h-screen max-w-[75%]" >
+                <h1 class="text-5xl font-bold p-4 pb-10 md:pb-10 transition-all duration-1000" transition:name={`blog ${id} container`}>{title}</h1>
+                
+                <p class="text-xl w-auto text-pretty pb-12" transition:name=`blog ${id} description`>{description} <a class="text-cyan-400 font-medium" href={link}>{title}</a></p>
+
+                <div class="flex justify-center " transition:name=`blog ${id} container`>
+
+                    <img src={img} alt="Stellar logo" class="w-[30em] md:w-[40em] transition-all duration-1000" transition:name=`blog ${id} image`/>
+
+              
+                </div>
+                <p class="text-xl w-auto text-pretty py-12">{post}</p>
+                
+            </div>
+        </article>
+    </section>
+</Layout>
