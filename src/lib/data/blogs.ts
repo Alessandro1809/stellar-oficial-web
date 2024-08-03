@@ -1,5 +1,18 @@
-{
-    "blogs": [
+
+   export interface Blogs {
+        id: number
+        title: string
+        description: string
+        link: string,
+        instagram?:string,
+        Youtube?: string,
+        Facebook?: string,
+        post: string
+        img: string
+    }
+
+
+    export const Articles:Blogs[] = [
         {   
             "id": 1,
             "title": "Zarpe Snacks",
@@ -28,4 +41,3 @@
             "img": "https://res.cloudinary.com/drwd1wtvt/image/upload/v1721938086/Captura_de_pantalla_2024-07-25_140635_ih380n.png"
         }
     ]
-}

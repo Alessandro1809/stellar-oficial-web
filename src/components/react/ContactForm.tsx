@@ -13,7 +13,7 @@ export const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label className="text-xl font-medium" htmlFor="name">Name:</label>
             <input
-            className=" bg-white/40 placeholder:text-black font-medium rounded-sm p-2"
+            className=" bg-white/40 placeholder:text-black/70 font-medium rounded-sm p-2"
             required
             type="text"
             name="name"
@@ -24,7 +24,7 @@ export const ContactForm = () => {
           <div className="w-full flex flex-col">
           <label className="text-xl font-medium " htmlFor="email">Email:</label>
             <input
-            className=" bg-white/40 placeholder:text-black font-medium rounded-sm p-2"
+            className=" bg-white/40 placeholder:text-black/70 font-medium rounded-sm p-2"
             required
             type="email"
             name="email"
@@ -34,7 +34,7 @@ export const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label className="text-xl font-medium" htmlFor="subject">Subject:</label>
             <input
-            className=" bg-white/40 placeholder:text-black font-medium whitespace-normal h-32 rounded-sm p-2" 
+            className=" bg-white/40 placeholder:text-black/70 font-medium whitespace-normal h-32 rounded-sm p-2" 
             required
             type="text"
             name="subject"
@@ -42,7 +42,7 @@ export const ContactForm = () => {
             />
           </div>
 
-          <input type="submit" value="Submit" />
+          <input className="w-32 my-4 bg-slate-300/40 font-medium rounded-md p-2" type="submit" value="Send" />
       </form>
     
     </>

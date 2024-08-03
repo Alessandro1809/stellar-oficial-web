@@ -1,22 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { blogs } from "@/lib/data/blogs.json"
+import { Articles } from "@/lib/data/blogs"
 
 const { id } =Astro.params;
 
-const blog = blogs.find((blog) => blog.id === Number(id));
+const blog = Articles.find((blog) => blog.id === Number(id));
 
 const { title, description, post, img, link} = blog;
 
-export async function getStaticPaths() {
-
-return blogs.map((blog) => ({
-    params:{
-        id: blog.id
-    }
-}))
-    
-}
 
 ---
 

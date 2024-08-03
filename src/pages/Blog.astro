@@ -1,9 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-
-import data from "@/lib/data/blogs.json"
-
-
+import {Articles} from "@/lib/data/blogs"
 
 ---
 
@@ -16,7 +13,7 @@ import data from "@/lib/data/blogs.json"
             <p class="text-2xl px-4 pb-10">Feel free to see our news about our products and company</p>
        
             <div class="flex flex-col md:flex-col gap-4 justify-center items-center ">
-                {data.blogs.map((blog) => (
+                {Articles.map((blog) => (
                        <article class="bg-gradient-to-tr from-white/20 via-cyan-300/20 to-indigo-500/20 min-w-[75%] m-4 grid grid-cols-1 md:grid-cols-[350px_1fr] border-b-2 border-indigo-500 shadow-lg">
                                 <picture class="w-full relative h-[250px] md:h-[320px]  md:max-h-[320px]" transition:name={`blog ${blog.id} container`}>
                                     <img 
