@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { title,description } = Astro.props;
+const Path  = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -44,10 +45,12 @@ const { title,description } = Astro.props;
 			particleColor="#FFFFFF"
 		  /> 
 			<Header/>
-			<main class="w-full border-b rounded-b-[5rem] animate-blurred-fade-in">
+			<main class=`${Path === '/Contact' ? 'w-full z-10' : 'w-full border-b rounded-b-[5rem] animate-blurred-fade-in'}`>
 			<slot class="animacion" /><!-- contenido del index-->
 			</main>
+			{Path !== '/Contact' ? ( 
 			<Footer />
+			) : (<div/>)}
 			<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 			<script is:inline>
 			AOS.init();
