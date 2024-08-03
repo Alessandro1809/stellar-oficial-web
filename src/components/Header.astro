@@ -4,21 +4,21 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import AnimatedLogo from "@/components/icons/AnimatedLogo.astro";
 ---
 
-<header class="container mx-auto">
+<header class="container mx-auto z-50">
     <Astronav>
      
             <Astronav>
-              <div class="flex justify-between p-4 md:py-2">
+              <div class="flex justify-between p-4 md:py-2 z-50">
                 <picture class="h-full w-auto rotate-[145deg] transition-all duration-1000 animate-blurred-fade-in">
                 <a href="/" class="logo z-50 relative w-auto">
                         <AnimatedLogo transition:persist/>
                     </a>
                 </picture>
                     
-                <MenuIcon class="w-10 h-auto text-white absolute top-5 right-6 z-50 block md:hidden animate-blurred-fade-in" />
+                <MenuIcon class="w-10 h-auto text-white absolute top-5 right-6 z-50 block md:hidden animate-blurred-fade-in " />
                 <NavLinks navLink="mx-4 hover:text-cyan-400 transition-all duration-200 text-2xl md:block text-nowrap" />
               </div>
-              <MenuItems class="hidden md:flex absolute top-0 z-40 pt-32 md:pt-0 translate-y-200 bg-slate-900/90 w-full text-center ">
+              <MenuItems class="hidden md:flex absolute top-0 pt-32 md:pt-0 translate-y-200 bg-slate-900/90 w-full text-center z-40">
                 <ul class="flex flex-col gap-4 pb-4 text-2xl font-semibold transition-all duration-1000 md:hidden">
                   <li><a href="/Projects">Projects</a></li>
                   <li><a href="/About">About</a></li>
