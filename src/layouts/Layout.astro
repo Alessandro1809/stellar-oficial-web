@@ -45,7 +45,7 @@ const Path  = Astro.url.pathname;
 			particleColor="#FFFFFF"
 		  /> 
 			<Header/>
-			<main class=`${Path === '/Contact' ? 'w-full z-10' : 'w-full border-b rounded-b-[5rem] animate-blurred-fade-in'}`>
+			<main class=`${Path === '/Contact' ? 'w-full ' : 'w-full border-b rounded-b-[5rem] animate-blurred-fade-in'}`>
 			<slot class="animacion" /><!-- contenido del index-->
 			</main>
 			{Path !== '/Contact' ? ( 
@@ -98,6 +98,4 @@ const Path  = Astro.url.pathname;
         0 0 20px #ffffff58;
   }
  
-
-
 </style>

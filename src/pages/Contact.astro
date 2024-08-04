@@ -6,13 +6,15 @@ import {ContactForm} from '@components/react/ContactForm';
 
 <Layout title="Contact" description="Contactanos para mas informacion!">
     
-    <section class="container mx-auto">
-        <div class="min-h-screen items-center grid">
-            <h2 class="text-7xl md:text-8xl font-bold mb-10 z-30 transition-all duration-1000">Let's get in touch!</h2>
-            <article class="grid grid-cols-1 md:grid-cols-2 ">
-                <div>
+    <section class="container mx-auto min-h-screen">
+        <div class="min-h-full items-center grid">
+            <div class="bg-purple-400/20 w-[20%] rounded-full blur-3xl h-32 -z-5 absolute mr-12"/>
+            <h2 class="text-7xl md:text-8xl font-bold z-30 transition-all duration-1000 mx-2 my-10">Let's get in touch!</h2>
+            <div class="bg-purple-400/20 w-[20%] rounded-full blur-3xl h-32 -z-5 absolute right-0 mr-12"/>
+            <article class="grid grid-cols-1 md:grid-cols-2  ">
+               
                     
-                    <section id="contact-footer" class="navbar p-4 max-w-screen-lg mx-auto text-white text-xl animate-blurred-fade-in" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="150" data-aos-easing="ease-in">
+                    <section id="contact-footer" class="navbar p-4 max-w-screen-lg mx-auto text-white text-xl animate-blurred-fade-in" data-aos="fade-up" data-aos-duration="1000" >
                  
                         <span>We'd love to hear from you! Whether you have a question, or just want to say hello, feel free to reach out us using the form or connect with us through my social media channels.<br/></span>
                         <span>Drop us a message and we'll get back to you as soon as possible!</span>
@@ -33,8 +35,8 @@ import {ContactForm} from '@components/react/ContactForm';
                              
                         </div>
                      </section> 
-                </div>
-                <div class="z-50 mt-12 md:mt-0 transition-all duration-1000">
+                
+                <div class="z-50  transition-all duration-1000">
                 <ContactForm client:idle/>
                 </div>
             </article>
@@ -43,5 +45,5 @@ import {ContactForm} from '@components/react/ContactForm';
    
 </Layout>
 <style>
-
+ 
 </style>
