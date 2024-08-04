@@ -1,11 +1,29 @@
 'use client';
-import { useState,useEffect, useRef, type FormEvent } from "react"
+import { useState, type FormEvent } from "react"
+import { type Email } from "@/lib/types/mailTypes";
+import { sendEmail } from "@/lib/emailservice"
 export const ContactForm = () => {
 
-  const handleSubmit = (e : FormEvent<HTMLFormElement>) => {
+  const mail: Email = {
+    name: "",
+    email: "",
+    message: ""
+  }
+  const [usermail,setUsermail] = useState(mail) ;
+
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-
+    try {
+      await sendEmail(
+        usermail.name,
+        usermail.email,
+        usermail.message
+      );
+      setUsermail(mail); 
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <>
@@ -13,29 +31,35 @@ export const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label className="text-xl font-medium" htmlFor="name">Name:</label>
             <input
-            className='border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none'
+            className='border-1  h-12 w-full rounded-md  px-3 py-2 text-slate-200 transition-all duration-500 focus:outline-none bg-[#1d2b43]/50'
             required
             type="text"
             name="name"
-            placeholder="ex. John Doe" 
+            placeholder="ex. John Doe"
+            value={usermail.name}
+            onChange={(e) => setUsermail({ ...usermail, name: e.target.value })} 
             />
           </div>
 
           <div className="w-full flex flex-col">
           <label className="text-xl font-medium " htmlFor="email">Email:</label>
             <input
-            className='border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none'
+            className='border-1  h-12 w-full rounded-md  px-3 py-2 text-slate-200 transition-all duration-500 focus:outline-none bg-[#1d2b43]/50'
             required
             type="email"
             name="email"
-            placeholder="ex. John@Doe.com" 
+            placeholder="ex. John@Doe.com"
+            value={usermail.email}
+            onChange={(e) => setUsermail({ ...usermail, email: e.target.value })}
             />
           </div>
           <div className="w-full flex flex-col">
             <label className="text-xl font-medium" htmlFor="subject">Subject:</label>
             <textarea 
-                className='border-1 block w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none h-40 text-wrap whitespace-normal' 
-                placeholder=" Hey! I have an idea in mind and I think it's an incredible project, let's schedule it and talk about it!">
+                className='border-1 h-40 w-full rounded-md  px-3 py-2 text-slate-200 transition-all duration-500 focus:outline-none bg-[#1d2b43]/50' 
+                placeholder=" Hey! I have an idea in mind and I think it's an incredible project, let's schedule it and talk about it!"
+                value={usermail.message}
+                onChange={(e) => setUsermail({ ...usermail, message: e.target.value })}>
             </textarea>
           </div>
           
