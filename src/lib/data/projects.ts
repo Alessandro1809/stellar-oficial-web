@@ -25,7 +25,7 @@ export const projects: Projects[] = [
         id: 2,
         color: 'rgba(233, 255, 113, 0.4)' ,
         title: "Chepeña Fonda",
-        link:"https://la-chepeña.netlify.app/",
+        link:"/blog/2",
         services: ["Branding", "Design"],
         img: chepena.src
     },

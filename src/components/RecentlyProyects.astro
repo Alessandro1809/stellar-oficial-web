@@ -12,7 +12,7 @@ import {projects} from "@/lib/data/projects"
         {projects.slice(0, 2).map(project => (
             
             <article class="w-full h-auto">
-              <a href={project.link}>
+              <a href={project.link} target="_blank">
               <div class="relative h-auto w-full group">
                 <div style={`background: radial-gradient(circle 400px at 50% 200px, ${project.color}, transparent);`} class="absolute bottom-0 left-0 right-0 top-0">
                 </div>
