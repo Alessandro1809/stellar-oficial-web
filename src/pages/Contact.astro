@@ -14,7 +14,7 @@ import NetworkChanels from '@/components/icons/NetworkChanels.astro';
             <article class="grid grid-cols-1 md:grid-cols-2  ">
                
                     
-                    <section id="contact-footer" class="navbar p-4 max-w-screen-lg mx-auto text-white text-xl animate-blurred-fade-in" data-aos="fade-up" data-aos-duration="1000" >
+                    <section id="contact-footer" class="navbar pb-10 p-4 max-w-screen-lg mx-auto text-white text-xl animate-blurred-fade-in" data-aos="fade-up" data-aos-duration="1000" >
                  
                         <span>We'd love to hear from you! Whether you have a question, or just want to say hello, feel free to reach out us using the form or connect with us through my social media channels.<br/></span>
                         <span>Drop us a message and we'll get back to you as soon as possible!</span>
@@ -23,7 +23,7 @@ import NetworkChanels from '@/components/icons/NetworkChanels.astro';
                      </section> 
                 
                 <div class="z-50  transition-all duration-1000 animate-blurred-fade-in">
-                <ContactForm client:idle/>
+                <ContactForm client:load/>
                 </div>
             </article>
         </div>

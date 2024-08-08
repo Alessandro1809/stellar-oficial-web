@@ -7,7 +7,7 @@ import {projects} from "@/lib/data/projects"
     Projects
 </h2>
 
-<section class="flex p-4 md:gap-12 gap-4 justify-center pb-28 z-50">
+<section class="flex p-4 md:gap-12 gap-4 justify-center pb-10 z-50">
     <div class="flex-col flex md:flex-row gap-4 transition-all duration-1000">
         {projects.slice(0, 2).map(project => (
             
@@ -36,6 +36,12 @@ import {projects} from "@/lib/data/projects"
               </footer>
             </article>
           ))}
+          
     </div>
+   
 </section>
+<span class="flex justify-center pb-16">
+
+  <a href="/Projects" class="text-xl md:text-2xl font-bold text-center transition-all duration-500 hover:text-cyan-300 underline underline-offset-2 ">View All...</a>
+</span>
 </div>
