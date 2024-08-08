@@ -34,7 +34,7 @@ import Menu from '@assets/Menu.pdf'
         },
         {
             "id": 3,
-            "title": "stellarcr.net",
+            "title": "STELLAR",
             "description": "Curious about our news? In these profiles you will find the most recent updates and official works and products from Stellar you can follow. For more information, visit",
             "post":"If you want to know what we are doing right now and see our activity, we invite you to follow us on our networks and keep up to date with the projects and different services that Stellar maintains. If you have any questions, remember that you can contact us and we will respond as soon as possible, we will be happy to discuss a proposal, clarify your doubts or simply chat",
             "link":"https://stellarcr.net",
